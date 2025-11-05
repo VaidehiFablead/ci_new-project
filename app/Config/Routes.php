@@ -12,6 +12,9 @@ use CodeIgniter\Router\RouteCollection;
 
 // $routes->get('welcome','Hello::index');
 
+
+
+
 $routes->group('first',function($routes){
     $routes->get('index','Hello::index');
     $routes->get('greet','Hello::greet');
