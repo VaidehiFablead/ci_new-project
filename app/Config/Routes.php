@@ -1,5 +1,6 @@
 <?php
 
+use App\Controllers\StdController;
 use App\Controllers\StudentController;
 use CodeIgniter\Router\RouteCollection;
 
@@ -35,5 +36,11 @@ $routes->post('/', 'StudentController::login');
 $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->get('dashboard', 'StudentController::dashboard');
     $routes->get('logout', 'StudentController::logout');
+    $routes->get('students', [StdController::class, 'index']);
+    $routes->get('students/indexview', [StdController::class, 'index_view']);
+    $routes->get('students/fetch', [StdController::class, 'fetchAll']);
+    $routes->post('students/store', [StdController::class, 'store']);
+    // $routes->delete('students/delete/(:num)', [StdController::class, 'delete/$1']);
+    $routes->post('students/delete', [StdController::class, 'delete']);
 
 });

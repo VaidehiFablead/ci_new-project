@@ -12,7 +12,7 @@
 <!-- ✅ Navbar Section -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">MyApp</a>
+    <a class="navbar-brand" href="#">Student</a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -21,10 +21,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" href="<?= base_url('/') ?>">Home</a>
+          <a class="nav-link" href="<?= base_url('students') ?>">Create Student</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
+          <a class="nav-link" href="<?= base_url('students/indexview') ?>">All Student</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-danger" href="<?= base_url('/logout') ?>">Logout</a>
